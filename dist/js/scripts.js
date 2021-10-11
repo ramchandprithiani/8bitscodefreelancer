@@ -52,3 +52,30 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+(function($) {
+    "use strict"; // Start of use strict
+    
+    // No JS
+  
+  })(jQuery);
+
+function emailNotification() {
+        
+    console.log('email function');
+    var name = document.body.querySelector('#name').value;
+    var email = document.body.querySelector('#email').value;
+    var phone = document.body.querySelector('#phone').value;
+    var message = document.body.querySelector('#message').value;
+    console.log(name);        
+    console.log(email);        
+    console.log(phone);        
+    console.log(message);
+    //  https://ebc-email-fn.azurewebsites.net/api/EmailFunction?name=$('#email-input')[0].value
+  var  response = $.getJSON('https://ebc-email-fn.azurewebsites.net/api/EmailFunction?callback=?', {
+    name:name,
+    email:email,
+    phone:phone,
+    message:message
+  });
+};

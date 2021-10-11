@@ -20,6 +20,19 @@
     }
 }
 
+
+// Custom social buttons
+.masthead-circle {
+    border-radius: 100%;
+    display: inline-flex;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @include media-breakpoint-up(lg) {
     .masthead {
         padding-top: calc(6rem + 104px);
